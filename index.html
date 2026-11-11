@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#251c29">
+<title>ESGOBuy spreadsheet | Dansk guide til fund, mål og QC</title>
+<meta name="description" content="Brug ESGOBuy spreadsheet som udgangspunkt. Find tøj og sneakers efter kategori, sammenlign mål og produktlinks, og tjek QC-billeder før køb.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:title" content="ESGOBuy spreadsheet | Dansk guide til fund, mål og QC">
+<meta property="og:description" content="Ti kategorier, tre købsguides og korte svar om produktlinks, mål og QC-billeder.">
+<style>
+:root{color-scheme:light;--bg:#f7f2eb;--ink:#251c29;--muted:#62565f;--paper:#fffcf8;--line:#d9cdd1;--acid:#edfa9b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+h1,h2,h3,p,figure{margin:0}
+h1,h2,h3{line-height:1.12}
+h1{font-size:clamp(2.45rem,7vw,5.9rem);letter-spacing:-.065em;overflow-wrap:anywhere}
+h2{font-size:clamp(1.55rem,4vw,2.45rem);letter-spacing:-.04em}
+h3{font-size:1.2rem}
+p+p{margin-top:.65rem}
+a{color:inherit}
+a:focus-visible,summary:focus-visible{outline:3px solid #9b5292;outline-offset:4px}
+.wrap{width:min(100% - 2rem,72rem);margin-inline:auto}
+.top,.foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-block:1rem}
+.brand{font-weight:850;text-decoration:none}
+.hero{display:grid;grid-template-columns:1.25fr 1fr;background:var(--ink);color:var(--paper);border-radius:1.35rem;overflow:hidden}
+.intro{padding:clamp(1.3rem,4.5vw,4rem);align-self:center}
+.intro p{max-width:46ch;margin:1.1rem 0;color:#f2e6ec}
+.cta{display:inline-block;background:var(--acid);color:var(--ink);padding:.65rem .95rem;border-radius:.5rem;font-weight:750;text-decoration:none}
+.hero figure{display:flex;flex-direction:column;background:#efe8e6;color:var(--ink)}
+img{display:block;width:100%;height:auto;background:#eee7e4}
+.hero img{flex:1;min-height:0;aspect-ratio:5/4;object-fit:contain}
+figcaption{padding:.55rem .8rem;font-size:.875rem}
+section{margin-block:clamp(1.9rem,5vw,3.6rem)}
+section>h2{margin-bottom:.85rem}
+.categories,.photos,.guides,.checklist{display:grid;gap:.75rem}
+.categories{grid-template-columns:repeat(5,minmax(0,1fr))}
+.categories a{display:flex;align-items:center;justify-content:space-between;gap:.4rem;min-height:3.1rem;padding:.6rem .75rem;border:1px solid var(--line);border-radius:.55rem;background:var(--paper);text-decoration:none;font-weight:680}
+.categories a:hover{background:var(--acid)}
+.photos{grid-template-columns:repeat(4,minmax(0,1fr))}
+.photos figure,.guides article,.checklist>div{overflow:hidden;background:var(--paper);border:1px solid var(--line);border-radius:.75rem}
+.photos img{aspect-ratio:1;object-fit:contain}
+.guides,.checklist{grid-template-columns:repeat(3,minmax(0,1fr))}
+.guides article,.checklist>div{padding:1rem}
+.guides p,.checklist dd{margin:.55rem 0 0;color:var(--muted)}
+.checklist dt{font-weight:750}
+details{border-top:1px solid var(--line);padding:.8rem .25rem}
+details:last-child,.foot{border-bottom:1px solid var(--line)}
+details p{margin:.55rem 0 .2rem;max-width:66ch}
+summary{cursor:pointer;font-weight:720}
+.foot{border-top:1px solid var(--line);border-bottom:0}
+@media(max-width:48rem){.hero{grid-template-columns:1fr}.hero img{max-height:17rem}.categories,.photos{grid-template-columns:repeat(2,minmax(0,1fr))}.guides,.checklist{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebPage",
+      "name":"ESGOBuy spreadsheet | Dansk guide til fund, mål og QC",
+      "description":"Brug ESGOBuy spreadsheet som udgangspunkt. Find tøj og sneakers efter kategori, sammenlign mål og produktlinks, og tjek QC-billeder før køb.",
+      "inLanguage":"da"
+    },
+    {
+      "@type":"FAQPage",
+      "inLanguage":"da",
+      "mainEntity":[
+        {"@type":"Question","name":"Hvad er et ESGOBuy spreadsheet?","acceptedAnswer":{"@type":"Answer","text":"Det er et produktark, hvor links og varianter kan samles til sammenligning. Åbn den aktuelle produktannonce for at bekræfte oplysningerne."}},
+        {"@type":"Question","name":"Hvor finder jeg produktlinks?","acceptedAnswer":{"@type":"Answer","text":"Vælg en af kategorierne øverst. Hver kategori fører til CAFANS, hvor du kan åbne de relevante produktannoncer."}},
+        {"@type":"Question","name":"Hvad kan QC-billeder vise?","acceptedAnswer":{"@type":"Answer","text":"QC-billeder kan vise synlige detaljer som syninger, farve og placering af mærker. Brug mål og materialebeskrivelse til at vurdere pasform og materiale."}},
+        {"@type":"Question","name":"Hvad skal jeg kontrollere ved levering til Danmark?","acceptedAnswer":{"@type":"Answer","text":"Kontrollér, om Danmark kan vælges som destination, og se efter fragt, eventuel moms og gebyrer samt returvilkår inden betaling."}}
+      ]
+    }
+  ]
+}
+</script>
+<!-- Bing-resultatsiden kunne ikke hentes. Emnevalget bygger på tilgængelige søgeresultater om produktark, kategorisøgning og QC. -->
+<link rel="canonical" href="https://kakobuyfinds.github.io/wsedp/">
+</head>
+<body>
+<header class="wrap top">
+  <a class="brand" href="https://www.cafans.com">www.cafans.com</a>
+  <a href="https://www.cafans.com">Se kataloget ↗</a>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <div class="intro">
+      <h1>ESGOBuy spreadsheet</h1>
+      <p>Start med en kategori, og sammenlign to eller tre varianter ud fra mål, produktfotos og den aktuelle annonce. Denne danske købsguide fører til CAFANS og hjælper dig med at vurdere, hvad der er værd at undersøge nærmere.</p>
+      <a class="cta" href="https://www.cafans.com">Gå til CAFANS ↗</a>
+    </div>
+    <figure>
+      <img src="https://nikeclprod.vtexassets.com/arquivos/ids/160793/CW2288_111_A_PREM.jpg?v=637654399803530000" width="800" height="640" fetchpriority="high" alt="Hvid Nike Air Force 1 ’07 med hvid sål">
+      <figcaption>Nike Air Force 1 ’07 · stilreference</figcaption>
+    </figure>
+  </div>
+
+  <section aria-labelledby="categories">
+    <h2 id="categories">Find din kategori</h2>
+    <nav class="categories" aria-label="Produktkategorier på CAFANS">
+      <a href="https://cafans.com/category-911-Shoes.html">Sko <span aria-hidden="true">↗</span></a>
+      <a href="https://cafans.com/category-912-Hoodies%2FSweaters.html">Hættetrøjer og trøjer <span aria-hidden="true">↗</span></a>
+      <a href="https://cafans.com/category-913-T-Shirts.html">T-shirts <span aria-hidden="true">↗</span></a>
+      <a href="https://cafans.com/category-914-Jackets.html">Jakker <span aria-hidden="true">↗</span></a>
+      <a href="https://cafans.com/category-915-Pants%2FShorts.html">Bukser og shorts <span aria-hidden="true">↗</span></a>
+      <a href="https://cafans.com/category-916-Headwear.html">Hovedbeklædning <span aria-hidden="true">↗</span></a>
+      <a href="https://cafans.com/category-917-Sets.html">Sæt <span aria-hidden="true">↗</span></a>
+      <a href="https://cafans.com/category-918-underwear%2Funderpants.html">Undertøj <span aria-hidden="true">↗</span></a>
+      <a href="https://cafans.com/category-919-Jersey.html">Spillertrøjer <span aria-hidden="true">↗</span></a>
+      <a href="https://cafans.com/category-920-Accessories.html">Tilbehør <span aria-hidden="true">↗</span></a>
+    </nav>
+  </section>
+
+  <section aria-labelledby="styles">
+    <h2 id="styles">Fra denim til smykker</h2>
+    <div class="photos">
+      <figure>
+        <img src="https://kream-phinf.pstatic.net/MjAyNTA3MzFfODcg/MDAxNzUzOTExMzA0MjAx.Q3VRoyNPGxaGW_-mQ07l-hDLyZyDE0k3mvRe1YAGnzEg.m5iegYZlLHa76_eYB_X4D9HJa2gpXOV0TQnZiWVF4Hsg.PNG/a_977387f3dd9248899073cf287a30db5b.png" width="640" height="640" loading="lazy" decoding="async" alt="Blå Louis Vuitton-denimjakke med monogrammønster">
+        <figcaption>Louis Vuitton · denimjakke</figcaption>
+      </figure>
+      <figure>
+        <img src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Gucci-kasket med GG-mønster">
+        <figcaption>Gucci · kasket</figcaption>
+      </figure>
+      <figure>
+        <img src="https://cdn1.jolicloset.com/imgr/full/2023/03/821167-1/blau-seide-hermes-carre-90-seidentucher.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Blåt Hermès Carré 90-silketørklæde">
+        <figcaption>Hermès · silketørklæde</figcaption>
+      </figure>
+      <figure>
+        <img src="https://assets.christiandior.com/is/image/diorprod/LOOK_F_25_2_LOOK_836_E12?%24lookDefault_GH-GHC%24=&amp;bfc=on&amp;crop=568%2C0%2C1864%2C2000&amp;qlt=85&amp;wid=640" width="640" height="640" loading="lazy" decoding="async" alt="Dior Clair D Lune-halskæde med guldfarvet finish">
+        <figcaption>Dior · halskæde</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="guides">
+    <h2 id="guides">Tre købsguides</h2>
+    <div class="guides">
+      <article>
+        <h3>ESGOBuy produktlinks</h3>
+        <p>Begynd med én kategori og en kort søgning som “lav hvid sneaker” eller “blå denimjakke”. Åbn hvert produktlink, og sammenlign farve, model og størrelse i den aktuelle annonce. Gem varianten sammen med linket, så du kan finde den igen, selv hvis produktlisten ændrer sig.</p>
+      </article>
+      <article>
+        <h3>ESGOBuy størrelsesguide</h3>
+        <p>Brug indvendig sållængde, hvis den er oplyst, og sammenlign den med en sko, der passer. Læg en hættetrøje fladt, og mål brystbredde, ryglængde og ærmelængde. Brug målene til at læse størrelsesskemaet, og se, om skemaet angiver kropsmål eller tøjmål.</p>
+      </article>
+      <article>
+        <h3>ESGOBuy QC-billeder</h3>
+        <p>QC betyder kvalitetskontrol. Hvis der er lagerfotos, så sammenhold farve, mærkning og syninger med den valgte variant. Se efter et foto af sålen på sneakers og et nærbillede af lynlåsen på jakker. Bed om et målefoto, hvis en afgørende dimension mangler.</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="compare">
+    <h2 id="compare">Hvad skal du sammenligne?</h2>
+    <dl class="checklist">
+      <div><dt>Tøj og sport</dt><dd>Ved en T-shirt med løs pasform er skulderbredde og tøjlængde nyttige. Se efter taljemål og benlængde på bukser, stofvægt på en kraftig hættetrøje, materialeblanding på undertøj og trykkets placering på en spillertrøje.</dd></div>
+      <div><dt>Hovedbeklædning og tilbehør</dt><dd>Se efter kaskettens justerbare omkreds, silketørklædets mål og halskædens længde. Tjek også låsetype, metalfinish og mål på et vedhæng. Ved et todelt sæt kan overdel og underdel have hvert sit størrelsesskema.</dd></div>
+      <div><dt>Bestilling og levering</dt><dd>Se efter samlet pris, fragt til Danmark, leveringsestimat og oplysninger om moms og gebyrer. Læs vilkårene for ombytning og retur, og kontrollér, om der er mulighed for at få billeder af den valgte vare før afsendelse.</dd></div>
+    </dl>
+  </section>
+
+  <section aria-labelledby="faq">
+    <h2 id="faq">Ofte stillede spørgsmål</h2>
+    <details open>
+      <summary>Hvad er et ESGOBuy spreadsheet?</summary>
+      <p>Det er et produktark, hvor links og varianter kan samles til sammenligning. Åbn den aktuelle produktannonce for at bekræfte oplysningerne.</p>
+    </details>
+    <details>
+      <summary>Hvor finder jeg produktlinks?</summary>
+      <p>Vælg en af kategorierne øverst. Hver kategori fører til CAFANS, hvor du kan åbne de relevante produktannoncer.</p>
+    </details>
+    <details>
+      <summary>Hvad kan QC-billeder vise?</summary>
+      <p>QC-billeder kan vise synlige detaljer som syninger, farve og placering af mærker. Brug mål og materialebeskrivelse til at vurdere pasform og materiale.</p>
+    </details>
+    <details>
+      <summary>Hvad skal jeg kontrollere ved levering til Danmark?</summary>
+      <p>Kontrollér, om Danmark kan vælges som destination, og se efter fragt, eventuel moms og gebyrer samt returvilkår inden betaling.</p>
+    </details>
+  </section>
+</main>
+<footer class="wrap foot">
+  <p>Uafhængig købsguide · Produktfotos bruges som stilreferencer.</p>
+  <a class="brand" href="https://www.cafans.com">www.cafans.com</a>
+</footer>
+</body>
+</html>
